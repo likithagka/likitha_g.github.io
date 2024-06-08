@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        
+        body {
+            color:black;
+            font-size:2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            font-family:cursive;
+            background-color: lightblue;
+            
+    
+
+        }
+    </style>
+</head>
+<body>
+    <div id="menu"></div>
+    <a href="#"  onclick="showMoodTracking()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-smile-upside-down-fill" viewBox="0 0 16 16">
+        <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M7 9.5C7 8.672 6.552 8 6 8s-1 .672-1 1.5.448 1.5 1 1.5 1-.672 1-1.5M4.285 6.433a.5.5 0 0 0 .683-.183A3.5 3.5 0 0 1 8 4.5c1.295 0 2.426.703 3.032 1.75a.5.5 0 0 0 .866-.5A4.5 4.5 0 0 0 8 3.5a4.5 4.5 0 0 0-3.898 2.25.5.5 0 0 0 .183.683M10 8c-.552 0-1 .672-1 1.5s.448 1.5 1 1.5 1-.672 1-1.5S10.552 8 10 8"/>
+      </svg></a>
+    
+</div>
+<div id="content"></div>
+</div>  
+<script>
+    function showMoodTracking() {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <h2>Mood Tracking</h2>
+                <p>On a scale of 1 to 10, how are you feeling today?</p>
+                <input type="number" id="moodInput" min="1" max="10"><br>
+                <button onclick="processMood()">Submit</button>
+                <div id="moodResponse"></div>
+                <br>
+                <a href="t.html">
+  <button>Go to menu</button>
+</a>
+            `;
+        }
+        
+        function processMood() {
+            const mood = document.getElementById('moodInput').value;
+            let response = '';
+
+            
+             if(mood == 1)
+            {
+                response="Im concered to hear this .Its important to take care of yourself an dreach out for help.Your well being is important,and there are ways to get throught tough times.Your not alone here talk to somone you trust or seeking proffessional support"
+            }
+            else if(mood==2){
+                response="I'm really sorry to hear that you're feeling like a 2. It's tough to be in that headspace. Remember, it's okay to feel this way sometimes, but it's also important to take care of yourself. "
+            }
+             else if (mood <= 4 && mood>=3) {
+                response = "I'm sorry to hear that.. It might help you to talk with someone whom you trust or try some relaxing activity. you can improve userself using resoures provided in our website";
+            } 
+            else if(mood == 5)
+            {
+                response="Hey, you're at a 5! That's right in the middle. How are you holding up? Feel free to share more about how you're feeling. I'm here to chat and support you through whatever you're going through."
+            }
+            else if (mood <= 7) {
+                response = "Thanks for sharing... Remember to take breaks and take care of yourself and take care of  your health listen to soft music ! ENJOY MOMENTS BEFORE THEY BECOME MEMORIES ! " ;
+                
+            } else {
+                response = "That's great to hear! Keep up the positive vibes! Have a best day ! enjoy ur day🥳";
+            }
+
+            document.getElementById('moodResponse').innerText = response;
+        }
+
+    
+    </script>
+</body>
+</html>

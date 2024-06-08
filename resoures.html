@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="2.css">
+    <style>
+        
+        body {
+            color:black;
+            font-size:2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            font-family:cursive
+            
+            
+    
+
+        }
+    </style>
+</head>
+<body>
+    <div id="menu"></div>
+    <a href="#"  onclick="showResources()"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brightness-alt-low-fill" viewBox="0 0 16 16">
+        <path d="M8.5 5.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m5 6a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1M2 11a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0m10.243-3.536a.5.5 0 1 1-.707-.707.5.5 0 0 1 .707.707m-8.486-.707a.5.5 0 1 0 .707.707.5.5 0 0 0-.707-.707M8 7a4 4 0 0 0-4 4 .5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5 4 4 0 0 0-4-4"/>
+      </svg></a>
+    
+</div>
+<div id="content"></div>
+</div>  
+<script>
+function showResources() {
+    const content = document.getElementById('content');
+    content.innerHTML = `
+        <h2>Resources</h2>
+        <ul>
+            
+            
+            
+            <li>Video: Deep Breathing Exercises</li>
+    <a href= "https://youtu.be/zrXs4mqc96E?si=eBKmrdHBvZo5Q5qX" target="_blank"> https://youtu.be/zrXs4mqc96E?si=eBKmrdHBvZo5Q5qX</a>
+    <li>Exercise: Mindfulness Meditation</li>
+    <a href="https://youtu.be/goqqLfrXzhI?si=yttpUfdw1Ll6hZDs" target="_blank"> https://youtu.be/goqqLfrXzhI?si=yttpUfdw1Ll6hZDs</a>
+    <li>Music: Feel good songs from your playlist </li>
+
+    <a  href="https://open.spotify.com/playlist/37i9dQZF1DXcBWIGoYBM5M" target="_blank" >https://open.spotify.com/playlist/37i9dQZF1DXcBWIGoYBM5M</a>
+      <li>Game: Managing Anxiety</li>
+            
+            <a href=" https://poki.com/en/g/sweet-world" target="_blank" >https://poki.com/en/g/sweet-world</a>  
+    
+    </ul>
+
+        <br>
+        <a href="t.html">
+  <button>Go to menu</button>
+</a>
+    
+    `;
+}
+</script>
+</body>
+</html>
